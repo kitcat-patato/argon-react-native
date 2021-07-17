@@ -45,30 +45,24 @@ class Onboarding extends React.Component {
       >
         <View style={styles.slide}>
           <Image source={require("../assets/imgs/leaf.gif")} style={styles.img} />
-          <Text style={styles.title}>Meet Up UI-Kit</Text>
+          <Text style={styles.title}>STATISTICS</Text>
           <Text style={styles.text}>
-            When I was 5 years old, my mother always told me that happiness was
-            the key to life. When I went to school, they asked me what I wanted
-            to be when I grew up.
+            Getting summarise environment statistics on hand 
           </Text>
         </View>
         <View style={styles.slide}>
           <Image source={require("../assets/imgs/clock.gif")} style={styles.img} />
-          <Text style={styles.title}>Discover</Text>
+          <Text style={styles.title}>LIVE</Text>
           <Text style={styles.text}>
-            When I was 5 years old, my mother always told me that happiness was
-            the key to life. When I went to school, they asked me what I wanted
-            to be when I grew up.
+            Live update of crops and livestock conditions
           </Text>
         </View>
 
         <View style={styles.slide}>
           <Image source={require("../assets/imgs/magnifier.gif")} style={styles.img} />
-          <Text style={styles.title}>Get Started</Text>
+          <Text style={styles.title}>ONE STOP</Text>
           <Text style={styles.text}>
-            When I was 5 years old, my mother always told me that happiness was
-            the key to life. When I went to school, they asked me what I wanted
-            to be when I grew up.
+            One stop overview and management of farms
           </Text>
           <Block flex center>
             <Button color="default"
