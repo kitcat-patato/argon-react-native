@@ -10,8 +10,8 @@ import {
 //galio
 import { Block, Text, theme } from "galio-framework";
 //argon
-import { articles, Images, argonTheme } from "../constants/";
-import { Card } from "../components/";
+import { articles, Images, argonTheme } from "../constants";
+import { Card } from "../components";
 
 const { width } = Dimensions.get("screen");
 
@@ -36,15 +36,14 @@ const categories = [
   }
 ];
 
-class Articles extends React.Component {
+class Logs extends React.Component {
   renderProduct = (item, index) => {
-    const { navigation } = this.props;
 
     return (
       <TouchableWithoutFeedback
         style={{ zIndex: 3 }}
         key={`product-${item.title}`}
-        onPress={() => navigation.navigate("Pro", { product: item })}
+        // onPress={() => navigation.navigate("Pro", { product: item })}
       >
         <Block center style={styles.productItem}>
           <Image
@@ -80,42 +79,16 @@ class Articles extends React.Component {
 
   renderCards = () => {
     return (
-      <Block flex style={styles.group}>
+      <Block style={styles.articles}>
         <Text bold size={16} style={styles.title}>
-          Cards
+          ALERT
         </Text>
-        <Block flex>
-          <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+        <Block >
+          <Block  card shadow style={styles.articles}>
             <Card item={articles[0]} horizontal />
-            <Block flex row>
-              <Card
-                item={articles[1]}
-                style={{ marginRight: theme.SIZES.BASE }}
-              />
-              <Card item={articles[2]} />
-            </Block>
-            <Card item={articles[4]} full />
-            <Block flex card shadow style={styles.category}>
-              <ImageBackground
-                source={{ uri: Images.Products["View article"] }}
-                style={[
-                  styles.imageBlock,
-                  { width: width - theme.SIZES.BASE * 2, height: 252 }
-                ]}
-                imageStyle={{
-                  width: width - theme.SIZES.BASE * 2,
-                  height: 252
-                }}
-              >
-                <Block style={styles.categoryTitle}>
-                  <Text size={18} bold color={theme.COLORS.WHITE}>
-                    View article
-                  </Text>
-                </Block>
-              </ImageBackground>
-            </Block>
+            <Card item={articles[0]} horizontal />
           </Block>
-          <Block flex style={{ marginTop: theme.SIZES.BASE / 2 }}>
+          {/* <Block flex style={{ marginTop: theme.SIZES.BASE / 2 }}>
             <ScrollView
               horizontal={true}
               pagingEnabled={true}
@@ -133,7 +106,7 @@ class Articles extends React.Component {
                   this.renderProduct(item, index)
                 )}
             </ScrollView>
-          </Block>
+          </Block> */}
         </Block>
       </Block>
     );
@@ -143,37 +116,14 @@ class Articles extends React.Component {
     const { navigation } = this.props;
 
     return (
-      <Block
-        flex
-        style={[styles.group, { paddingBottom: theme.SIZES.BASE * 5 }]}
-      >
+      <Block flex style={[styles.articles]}>
         <Text bold size={16} style={styles.title}>
-          Album
+          UPDATES
         </Text>
-        <Block style={{ marginHorizontal: theme.SIZES.BASE * 2 }}>
-          <Block flex right>
-            <Text
-              size={12}
-              color={theme.COLORS.PRIMARY}
-              onPress={() => navigation.navigate("Home")}
-            >
-              View All
-            </Text>
-          </Block>
-          <Block
-            row
-            space="between"
-            style={{ marginTop: theme.SIZES.BASE, flexWrap: "wrap" }}
-          >
-            {Images.Viewed.map((img, index) => (
-              <Block key={`viewed-${img}`} style={styles.shadow}>
-                <Image
-                  resizeMode="cover"
-                  source={{ uri: img }}
-                  style={styles.albumThumb}
-                />
-              </Block>
-            ))}
+        <Block flex>
+        <Block flex card shadow style={styles.articles}>
+            <Card item={articles[1]} horizontal />
+            <Card item={articles[1]} horizontal />
           </Block>
         </Block>
       </Block>
@@ -195,6 +145,10 @@ class Articles extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  articles: {
+    width: width - theme.SIZES.BASE * 2,
+    paddingVertical: theme.SIZES.BASE,
+  },
   title: {
     paddingBottom: theme.SIZES.BASE,
     paddingHorizontal: theme.SIZES.BASE * 2,
@@ -250,4 +204,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Articles;
+export default Logs;

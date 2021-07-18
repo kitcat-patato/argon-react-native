@@ -1,14 +1,13 @@
 export default [
   {
-    title: 'Ice cream is made with carrageenan …',
-    image: 'https://images.unsplash.com/photo-1516559828984-fb3b99548b21?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80',
-    cta: 'View article', 
-    horizontal: true
+    title: 'Your plant is dying',
+    image: 'https://us.123rf.com/450wm/sanek13744/sanek137441904/sanek13744190400358/123344818-emergency-siren-icon-in-flat-style-police-alarm-vector-illustration-on-white-isolated-background-med.jpg?ver=6',
+    cta: 'View details' 
   },
   {
-    title: 'Is makeup one of your daily esse …',
-    image: 'https://images.unsplash.com/photo-1519368358672-25b03afee3bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2004&q=80',
-    cta: 'View article'
+    title: 'Time to harvest your crops',
+    image: 'https://developers.google.com/web/updates/images/generic/notifications.png?hl=zh-tw',
+    cta: 'View details'
   },
   {
     title: 'Coffee is more than just a drink: It’s …',

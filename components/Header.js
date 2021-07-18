@@ -61,11 +61,6 @@ class Header extends React.Component {
     }
 
     switch (title) {
-      case 'Home':
-        return ([
-          <BellButton key='chat-home' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-home' navigation={navigation} isWhite={white} />
-        ]);
       case 'Deals':
         return ([
           <BellButton key='chat-categories' navigation={navigation} />,
@@ -79,11 +74,6 @@ class Header extends React.Component {
       case 'Category':
         return ([
           <BellButton key='chat-deals' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Profile':
-        return ([
-          <BellButton key='chat-profile' navigation={navigation} isWhite={white} />,
           <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
         ]);
       case 'Product':

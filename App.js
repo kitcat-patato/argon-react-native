@@ -18,7 +18,6 @@ const assetImages = [
   Images.Onboarding,
   Images.LogoOnboarding,
   Images.Logo,
-  Images.Pro,
   Images.ArgonLogo,
   Images.iOSLogo,
   Images.androidLogo

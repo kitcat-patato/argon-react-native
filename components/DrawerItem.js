@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity, Linking } from "react-native";
 import { Block, Text, theme } from "galio-framework";
+import { FontAwesome, FontAwesome5} from '@expo/vector-icons'; 
 
-import Icon from "./Icon";
 import argonTheme from "../constants/Theme";
 
 class DrawerItem extends React.Component {
@@ -10,58 +10,46 @@ class DrawerItem extends React.Component {
     const { title, focused } = this.props;
 
     switch (title) {
-      case "Home":
+      case "Dashboard":
         return (
-          <Icon
-            name="shop"
-            family="ArgonExtra"
+          <FontAwesome
+            name="bar-chart-o"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.PRIMARY}
           />
         );
-      case "Elements":
+      case "Crops":
         return (
-          <Icon
-            name="map-big"
-            family="ArgonExtra"
+          <FontAwesome
+            name="leaf"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.ERROR}
           />
         );
-      case "Articles":
+      case "Livestock":
         return (
-          <Icon
-            name="spaceship"
-            family="ArgonExtra"
+          <FontAwesome5
+            name="fish"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.PRIMARY}
           />
         );
-      case "Profile":
+      case "Logs":
         return (
-          <Icon
-            name="chart-pie-35"
-            family="ArgonExtra"
+          <FontAwesome
+            name="list"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.WARNING}
           />
         );
-      case "Account":
+      case "Profile":
         return (
-          <Icon
-            name="calendar-date"
-            family="ArgonExtra"
+          <FontAwesome
+            name="user"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.INFO}
           />
         );
-      case "Getting Started":
-        return (<Icon
-          name="spaceship"
-          family="ArgonExtra"
-          size={14}
-          color={focused ? "white" : "rgba(0,0,0,0.5)"}
-        />);
       case "Log out":
         return <Icon />;
       default:
