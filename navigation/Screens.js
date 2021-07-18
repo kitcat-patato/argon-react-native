@@ -9,7 +9,7 @@ import { Block } from "galio-framework";
 
 // screens
 import Dashboard from "../screens/Dashboard";
-import Onboarding from "../screens/Onboarding";
+import Onboarding from "../screens/Onboarding"; 
 import Profile from "../screens/Profile";
 import Crops from "../screens/Crops";
 import Elements from "../screens/Elements";
