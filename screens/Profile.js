@@ -12,7 +12,7 @@ import { Block, Text, theme } from "galio-framework";
 import { Button } from "../components";
 import { Images, argonTheme } from "../constants";
 import { HeaderHeight } from "../constants/utils";
-import { connect } from 'react-redux';
+//import { connect } from 'react-redux';
 import { Auth } from 'aws-amplify';
 
 const { width, height } = Dimensions.get("screen");

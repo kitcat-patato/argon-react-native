@@ -1,0 +1,65 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rnamplify-dev-204517-authRole",
+      "UnauthRoleArn": "arn:aws:iam::614534636855:role/amplify-rnamplify-dev-204517-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::614534636855:role/amplify-rnamplify-dev-204517-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-rnamplify-dev-204517-deployment",
+      "UnauthRoleName": "amplify-rnamplify-dev-204517-unauthRole",
+      "StackName": "amplify-rnamplify-dev-204517",
+      "StackId": "arn:aws:cloudformation:us-east-1:614534636855:stack/amplify-rnamplify-dev-204517/5aae1dc0-e4a1-11eb-aa74-0acbf9fdb907",
+      "AmplifyAppId": "d21smv5xetih4e"
+    }
+  },
+  "api": {
+    "rnamplify": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 31,
+              "description": "trial1"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "by5op33fjjhdrnwi7lb5eu4vwu",
+        "GraphQLAPIEndpointOutput": "https://4yg6sjrbtbewpbaggtt3gjxmhm.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-mzyd4c67mjgljmke2iddbmym6i"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-rnamplify-dev-204517-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apirnamplify"
+      },
+      "lastPushTimeStamp": "2021-07-16T03:14:43.215Z",
+      "lastPushDirHash": "sEvvMPQroSZhrZw8kpZqzRxykRU="
+    }
+  },
+  "auth": {
+    "rnamplify2731d729": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-rnamplify-dev-204517-deployment/amplify-cfn-templates/auth/rnamplify2731d729-cloudformation-template.yml",
+        "logicalId": "authrnamplify2731d729"
+      },
+      "lastPushTimeStamp": "2021-07-16T03:14:43.215Z",
+      "output": {
+        "UserPoolId": "us-east-1_B5el9SWGN",
+        "AppClientIDWeb": "2646qqrjeta90lf3crrbhal9pp",
+        "AppClientID": "hb5qpl7df4hsgkjrcgqd79v2p",
+        "IdentityPoolId": "us-east-1:dc45bc7f-206e-4b80-967e-90ca3b867883",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:614534636855:userpool/us-east-1_B5el9SWGN",
+        "IdentityPoolName": "rnamplify2731d729_identitypool_2731d729__dev",
+        "UserPoolName": "rnamplify2731d729_userpool_2731d729"
+      },
+      "lastPushDirHash": "0WGkN5icopOaUtxyWLXuMItVPiI="
+    }
+  }
+}

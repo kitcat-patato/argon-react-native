@@ -6,6 +6,13 @@ import { Asset } from "expo-asset";
 import { Block, GalioProvider } from "galio-framework";
 import { NavigationContainer } from "@react-navigation/native";
 
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './src/aws-exports';
+
+Amplify.configure(awsconfig);
+
+// >>New - Configuring Auth Module
+Auth.configure(awsconfig);
 // Before rendering any navigation stack
 import { enableScreens } from "react-native-screens";
 enableScreens();

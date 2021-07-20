@@ -14,6 +14,7 @@ import Profile from "../screens/Profile";
 import Crops from "../screens/Crops";
 import LiveStock from "../screens/LiveStock";
 import Logs from "../screens/Logs";
+import Authentication from "../screens/Authentication";
 // drawer
 import CustomDrawerContent from "./Menu";
 
@@ -134,6 +135,21 @@ export default function OnboardingStack(props) {
           headerTransparent: true
         }}
       />
+      <Stack.Screen name="Authentication" component={AuthenticationStack} />
+    </Stack.Navigator>
+  );
+}
+
+function AuthenticationStack(props) {
+  return (
+    <Stack.Navigator mode="card" headerMode="none">
+      <Stack.Screen
+        name="Authentication"
+        component={Authentication}
+        option={{
+          headerTransparent: true
+        }}
+      />
       <Stack.Screen name="App" component={AppStack} />
     </Stack.Navigator>
   );
@@ -178,4 +194,3 @@ function AppStack(props) {
     </Drawer.Navigator>
   );
 }
-
