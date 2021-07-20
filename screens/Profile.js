@@ -12,12 +12,20 @@ import { Block, Text, theme } from "galio-framework";
 import { Button } from "../components";
 import { Images, argonTheme } from "../constants";
 import { HeaderHeight } from "../constants/utils";
+import { connect } from 'react-redux';
+import { Auth } from 'aws-amplify';
 
 const { width, height } = Dimensions.get("screen");
 
 const thumbMeasure = (width - 48 - 32) / 3;
 
 class Profile extends React.Component {
+  handleSignOut = () => {
+    Auth.signOut()
+      .then(() => this.props.navigation.navigate('Authentication'))
+      .catch(err => console.log(err));
+  }
+
   render() {
     return (
       <Block flex style={styles.profile}>
@@ -89,14 +97,14 @@ class Profile extends React.Component {
                       color="#525F7F"
                       style={{ textAlign: "center" }}
                     >
-                      Remember to prioritize own health over anything  
+                      Remember to prioritize own health over anything
                     </Text>
                   </Block>
                   <Block
                     row
                     space="between"
                   >
-                    <Text bold size={16} color="#525F7F" style={{marginTop: 12}}>
+                    <Text bold size={16} color="#525F7F" style={{ marginTop: 12 }}>
                       Settings
                     </Text>
                   </Block>
@@ -113,7 +121,7 @@ class Profile extends React.Component {
                   <Button color="default">
                     About FarmzTech
                   </Button>
-                  <Button color="error">
+                  <Button color="error" onPress={this.handleSignOut}>
                     Log Out
                   </Button>
                 </Block>

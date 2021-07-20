@@ -15,7 +15,7 @@ function CustomDrawerContent({ drawerPosition, navigation, profile, focused, sta
   const screens = [
     "Dashboard", 
     "Crops",
-    "Livestock",
+    "LiveStock",
     "Logs",
     "Profile",
   ];

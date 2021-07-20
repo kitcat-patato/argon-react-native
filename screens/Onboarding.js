@@ -66,7 +66,7 @@ class Onboarding extends React.Component {
           </Text>
           <Block flex center>
             <Button color="default"
-              onPress={() => navigation.navigate("App")} >
+              onPress={() => navigation.navigate("Authentication")} >
               LET'S GET STARTED!
             </Button>
           </Block>

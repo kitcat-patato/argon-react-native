@@ -12,7 +12,7 @@ import Dashboard from "../screens/Dashboard";
 import Onboarding from "../screens/Onboarding"; 
 import Profile from "../screens/Profile";
 import Crops from "../screens/Crops";
-import Elements from "../screens/Elements";
+import LiveStock from "../screens/LiveStock";
 import Logs from "../screens/Logs";
 // drawer
 import CustomDrawerContent from "./Menu";
@@ -28,15 +28,15 @@ const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 
-function ElementsStack(props) {
+function LiveStockStack(props) {
   return (
     <Stack.Navigator mode="card" headerMode="screen">
       <Stack.Screen
-        name="Elements"
-        component={Elements}
+        name="LiveStock"
+        component={LiveStock}
         options={{
           header: ({ navigation, scene }) => (
-            <Header title="Elements" navigation={navigation} scene={scene} />
+            <Header title="LiveStock" navigation={navigation} scene={scene} />
           ),
           cardStyle: { backgroundColor: "#F8F9FE" }
         }}
@@ -172,7 +172,7 @@ function AppStack(props) {
     >
       <Drawer.Screen name="Dashboard" component={DashboardStack} />
       <Drawer.Screen name="Crops" component={CropsStack} />
-      <Drawer.Screen name="Elements" component={ElementsStack} />
+      <Drawer.Screen name="LiveStock" component={LiveStockStack} />
       <Drawer.Screen name="Logs" component={LogsStack} />
       <Drawer.Screen name="Profile" component={ProfileStack} />
     </Drawer.Navigator>
