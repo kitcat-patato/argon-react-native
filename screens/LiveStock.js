@@ -21,7 +21,7 @@ const categories = [
     description:
       "Temperature: 24 \n PH Value: 6",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfPCQoxUrxNpafOF42zx89tPDmt9TN-RMRQ&usqp=CAU",
+      "https://media.giphy.com/media/puKGe5eOALSh42ip0w/giphy.gif",
     section: "Section 1"
   },
   {
@@ -29,7 +29,7 @@ const categories = [
     description:
       "Temperature: 24 \n PH Value: 6",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfPCQoxUrxNpafOF42zx89tPDmt9TN-RMRQ&usqp=CAU",
+      "https://i.gifer.com/g2v9.gif",
     section: "Section 2"
   },
   {
@@ -37,7 +37,7 @@ const categories = [
     description:
       "Temperature: 24 \n PH Value: 6",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfPCQoxUrxNpafOF42zx89tPDmt9TN-RMRQ&usqp=CAU",
+      "https://media2.giphy.com/media/AwCdK6OS6J1OE/giphy.gif?cid=ecf05e47ercngo788ay5b9dybrjv2v8fqkil2mldx1mbegme&rid=giphy.gif&ct=g",
     section: "Section 3"
   },
   {
@@ -45,7 +45,7 @@ const categories = [
     description:
       "Temperature: 24 \n PH Value: 6",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfPCQoxUrxNpafOF42zx89tPDmt9TN-RMRQ&usqp=CAU",
+      "https://i.gifer.com/WW8.gif",
     section: "Section 4"
   }
 ];

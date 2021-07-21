@@ -23,7 +23,7 @@ const categories = [
     description:
       "Temperature: 24 \n PH Value: 6",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfPCQoxUrxNpafOF42zx89tPDmt9TN-RMRQ&usqp=CAU",
+      "https://i.gifer.com/HAhw.gif",
     section: "Section 1"
   },
   {
@@ -31,7 +31,7 @@ const categories = [
     description:
       "Temperature: 24 \n PH Value: 6",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfPCQoxUrxNpafOF42zx89tPDmt9TN-RMRQ&usqp=CAU",
+      "https://i.gifer.com/MJQC.gif",
     section: "Section 2"
   },
   {
@@ -39,7 +39,7 @@ const categories = [
     description:
       "Temperature: 24 \n PH Value: 6",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfPCQoxUrxNpafOF42zx89tPDmt9TN-RMRQ&usqp=CAU",
+      "https://media1.giphy.com/media/WM5rquwnPzBtK/giphy.gif?cid=ecf05e47mzjbb2wbgxjxdygm2y3mcqft1jhq8ffy9fr6k5ki&rid=giphy.gif&ct=g",
     section: "Section 3"
   },
   {
@@ -47,7 +47,7 @@ const categories = [
     description:
       "Temperature: 24 \n PH Value: 6",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfPCQoxUrxNpafOF42zx89tPDmt9TN-RMRQ&usqp=CAU",
+      "https://www.gardenzeus.com/wp-content/uploads/shutterstock_83082550-2.jpg",
     section: "Section 4"
   }
 ];
