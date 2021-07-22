@@ -6,5 +6,13 @@
       "dependsOn": [],
       "customAuth": false
     }
+  },
+  "storage": {
+    "argonreactnativekk4ad2df3c": {
+      "service": "S3",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
+    }
   }
 }

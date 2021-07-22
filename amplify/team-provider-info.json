@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "argonreactnativekkedd86f3e": {}
+      },
+      "storage": {
+        "argonreactnativekk4ad2df3c": {
+          "bucketName": "amplify-argonreactnativekk-dev-172140-deployment",
+          "region": "us-east-1"
+        }
       }
     }
   }
