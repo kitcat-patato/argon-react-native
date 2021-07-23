@@ -17,38 +17,8 @@ const { width } = Dimensions.get("screen");
 
 const thumbMeasure = (width - 48 - 32) / 3;
 const cardWidth = width - theme.SIZES.BASE * 2;
-var categories = [
-  {
-    title: "Statistics S1",
-    description: "Temperature: 24 \n PH Value: 6",
-    image: "https://i.gifer.com/HAhw.gif",
-    section: "Section 1",
-    health: "temp"
-  },
-  {
-    title: "Statistics S2",
-    description: "Temperature: 24 \n PH Value: 6",
-    image: "https://i.gifer.com/MJQC.gif",
-    section: "Section 2",
-    health: "temp"
-  },
-  {
-    title: "Statistics S3",
-    description: "Temperature: 24 \n PH Value: 6",
-    image: "https://media1.giphy.com/media/WM5rquwnPzBtK/giphy.gif?cid=ecf05e47mzjbb2wbgxjxdygm2y3mcqft1jhq8ffy9fr6k5ki&rid=giphy.gif&ct=g",
-    section: "Section 3",
-    health: "temp"
-  },
-  {
-    title: "Statistics S4",
-    description: "Temperature: 24 \n PH Value: 6",
-    image: "https://www.gardenzeus.com/wp-content/uploads/shutterstock_83082550-2.jpg",
-    section: "Section 4",
-    health: "temp"
-  }
-];
 
-var jsondata;
+var jsondata = {plant_type: "Tomato", plant_health: "GOOD"};
 
 function getJson() {
   return fetch('https://amplify-argonreactnativekk-dev-172140-deployment.s3.amazonaws.com/plant_status+(2).json')
@@ -58,11 +28,41 @@ function getJson() {
     });
 }
 
-getJson().then(data => data = jsondata);
+getJson().then(data => {
+  jsondata = data;
+  console.log(jsondata);
+});
 
-for (var x in categories) {
-  x.health = jsondata.plant_health;
-}
+var categories = [
+  {
+    title: "Statistics S1",
+    description: "Temperature: 24 \n PH Value: 6",
+    image: "https://i.gifer.com/HAhw.gif",
+    section: "Section 1",
+    health: "GOOD"
+  },
+  {
+    title: "Statistics S2",
+    description: "Temperature: 24 \n PH Value: 6",
+    image: "https://i.gifer.com/MJQC.gif",
+    section: "Section 2",
+    health: "GOOD"
+  },
+  {
+    title: "Statistics S3",
+    description: "Temperature: 24 \n PH Value: 6",
+    image: "https://media1.giphy.com/media/WM5rquwnPzBtK/giphy.gif?cid=ecf05e47mzjbb2wbgxjxdygm2y3mcqft1jhq8ffy9fr6k5ki&rid=giphy.gif&ct=g",
+    section: "Section 3",
+    health: "GOOD"
+  },
+  {
+    title: "Statistics S4",
+    description: "Temperature: 24 \n PH Value: 6",
+    image: "https://www.gardenzeus.com/wp-content/uploads/shutterstock_83082550-2.jpg",
+    section: "Section 4",
+    health: jsondata.plant_health
+  }
+];
 
 class Crops extends React.Component {
   renderProduct = (item, index) => {
