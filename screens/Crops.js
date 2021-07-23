@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
   ScrollView,
   StyleSheet,
@@ -20,54 +20,47 @@ const cardWidth = width - theme.SIZES.BASE * 2;
 var categories = [
   {
     title: "Statistics S1",
-    description:
-      "Temperature: 24 \n PH Value: 6",
-    image:
-      "https://i.gifer.com/HAhw.gif",
+    description: "Temperature: 24 \n PH Value: 6",
+    image: "https://i.gifer.com/HAhw.gif",
     section: "Section 1",
     health: "temp"
   },
   {
     title: "Statistics S2",
-    description:
-      "Temperature: 24 \n PH Value: 6",
-    image:
-      "https://i.gifer.com/MJQC.gif",
+    description: "Temperature: 24 \n PH Value: 6",
+    image: "https://i.gifer.com/MJQC.gif",
     section: "Section 2",
     health: "temp"
   },
   {
     title: "Statistics S3",
-    description:
-      "Temperature: 24 \n PH Value: 6",
-    image:
-      "https://media1.giphy.com/media/WM5rquwnPzBtK/giphy.gif?cid=ecf05e47mzjbb2wbgxjxdygm2y3mcqft1jhq8ffy9fr6k5ki&rid=giphy.gif&ct=g",
+    description: "Temperature: 24 \n PH Value: 6",
+    image: "https://media1.giphy.com/media/WM5rquwnPzBtK/giphy.gif?cid=ecf05e47mzjbb2wbgxjxdygm2y3mcqft1jhq8ffy9fr6k5ki&rid=giphy.gif&ct=g",
     section: "Section 3",
     health: "temp"
   },
   {
     title: "Statistics S4",
-    description:
-      "Temperature: 24 \n PH Value: 6",
-    image:
-      "https://www.gardenzeus.com/wp-content/uploads/shutterstock_83082550-2.jpg",
+    description: "Temperature: 24 \n PH Value: 6",
+    image: "https://www.gardenzeus.com/wp-content/uploads/shutterstock_83082550-2.jpg",
     section: "Section 4",
     health: "temp"
   }
 ];
 
+var jsondata;
+
 function getJson() {
   return fetch('https://amplify-argonreactnativekk-dev-172140-deployment.s3.amazonaws.com/plant_status+(2).json')
-    .then(response => response.text())
-    .then(y => console.log("initial data", y))
+    .then(response => response.json())
     .catch(error => {
       console.error(error);
     });
 }
 
-var jsondata = getJson();
+getJson().then(data => data = jsondata);
 
-for(var x in categories){
+for (var x in categories) {
   x.health = jsondata.plant_health;
 }
 
@@ -99,7 +92,7 @@ class Crops extends React.Component {
             <Text
               center
               size={16}
-              color={item.health="GOOD"? theme.COLORS.MUTED: theme.COLORS.ERROR}
+              color={item.health = "GOOD" ? theme.COLORS.MUTED : theme.COLORS.ERROR}
               style={styles.productDescription}
             >
               {item.description}
@@ -113,26 +106,26 @@ class Crops extends React.Component {
   renderCards = () => {
     return (
       <Block style={styles.group}>
-          <Block flex style={{ marginTop: theme.SIZES.BASE / 2 }}>
-            <ScrollView
-              horizontal={true}
-              pagingEnabled={true}
-              decelerationRate={0}
-              scrollEventThrottle={16}
-              snapToAlignment="center"
-              showsHorizontalScrollIndicator={false}
-              snapToInterval={cardWidth + theme.SIZES.BASE * 0.375}
-              contentContainerStyle={{
-                paddingHorizontal: theme.SIZES.BASE / 2
-              }}
-            >
-              {categories &&
-                categories.map((item, index) =>
-                  this.renderProduct(item, index)
-                )}
-            </ScrollView>
-          </Block>
+        <Block flex style={{ marginTop: theme.SIZES.BASE / 2 }}>
+          <ScrollView
+            horizontal={true}
+            pagingEnabled={true}
+            decelerationRate={0}
+            scrollEventThrottle={16}
+            snapToAlignment="center"
+            showsHorizontalScrollIndicator={false}
+            snapToInterval={cardWidth + theme.SIZES.BASE * 0.375}
+            contentContainerStyle={{
+              paddingHorizontal: theme.SIZES.BASE / 2
+            }}
+          >
+            {categories &&
+              categories.map((item, index) =>
+                this.renderProduct(item, index)
+              )}
+          </ScrollView>
         </Block>
+      </Block>
     );
   };
 
