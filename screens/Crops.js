@@ -59,14 +59,15 @@ var categories = [
 
 function getJson() {
   return fetch('https://amplify-argonreactnativekk-dev-172140-deployment.s3.amazonaws.com/plant_status.json')
-    .then(response => response.json())
+    .then(response => response.text())
     .catch(error => {
       console.error(error);
     });
 }
 
-for(let x in categories){
+for(var x in categories){
   jsondata = getJson();
+  console.log("jsondata is here", jsondata);
   x.health = jsondata.plant_health;
 }
 
