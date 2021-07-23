@@ -58,7 +58,7 @@ var categories = [
 ];
 
 function getJson() {
-  return fetch('https://amplify-argonreactnativekk-dev-172140-deployment.s3.amazonaws.com/plant_status.json')
+  return fetch('https://amplify-argonreactnativekk-dev-172140-deployment.s3.amazonaws.com/plant_status+(2).json')
     .then(response => response.text())
     .catch(error => {
       console.error(error);
