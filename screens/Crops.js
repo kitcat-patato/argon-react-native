@@ -17,7 +17,6 @@ const { width } = Dimensions.get("screen");
 
 const thumbMeasure = (width - 48 - 32) / 3;
 const cardWidth = width - theme.SIZES.BASE * 2;
-var jsondata;
 var categories = [
   {
     title: "Statistics S1",
@@ -58,7 +57,7 @@ var categories = [
 ];
 
 function getJson() {
-  return fetch('s3://amplify-argonreactnativekk-dev-172140-deployment/plant_status (2).json')
+  return fetch('https://amplify-argonreactnativekk-dev-172140-deployment.s3.amazonaws.com/plant_status+(2).json')
     .then(response => response.text())
     .then(y => console.log("initial data", y))
     .catch(error => {
@@ -66,9 +65,9 @@ function getJson() {
     });
 }
 
+var jsondata = getJson();
+
 for(var x in categories){
-  jsondata = getJson();
-  console.log("jsondata is here", jsondata);
   x.health = jsondata.plant_health;
 }
 
