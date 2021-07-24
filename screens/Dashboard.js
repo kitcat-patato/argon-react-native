@@ -13,7 +13,13 @@ const plant = require("../assets/Plant.png");
 const fish = require("../assets/Fish.png");
 
 class Dashboard extends React.Component {
-  state = {
+  stateA = {
+    activeSections: [],
+    collapsed: true,
+    multipleSelect: false,
+  };
+
+  stateB = {
     activeSections: [],
     collapsed: true,
     multipleSelect: false,
@@ -39,7 +45,7 @@ class Dashboard extends React.Component {
               <Text style={styles.headerText}>View Details</Text>
             </View>
           </TouchableOpacity>
-          <Collapsible collapsed={this.state.collapsed} align="center">
+          <Collapsible collapsed={this.stateA.collapsed} align="center">
             <View style={styles.content}>
               <Text>
                 Average Temperature: 28
@@ -59,7 +65,7 @@ class Dashboard extends React.Component {
               <Text style={styles.headerText}>View Details</Text>
             </View>
           </TouchableOpacity>
-          <Collapsible collapsed={this.state.collapsed} align="center">
+          <Collapsible collapsed={this.stateB.collapsed} align="center">
             <View style={styles.content}>
               <Text>
                 Average Temperature: 28
