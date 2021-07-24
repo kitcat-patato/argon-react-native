@@ -8,6 +8,7 @@ import Collapsible from 'react-native-collapsible';
 
 
 const { width } = Dimensions.get('screen');
+const cardWidth = width - theme.SIZES.BASE * 2;
 const plant = require("../assets/Plant.png");
 const fish = require("../assets/Fish.png");
 
