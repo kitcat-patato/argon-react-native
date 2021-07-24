@@ -94,7 +94,7 @@ class Crops extends React.Component {
             <Text
               center
               size={16}
-              color={item.health == "GOOD" ? theme.COLORS.MUTED : theme.COLORS.ERROR}
+              color={item.health == "GOOD" ? "black" : "red"}
               style={styles.productDescription}
             >
               {item.description}

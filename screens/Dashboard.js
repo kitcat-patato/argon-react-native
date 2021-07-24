@@ -4,22 +4,25 @@ import { Block, theme } from 'galio-framework';
 
 import { Card } from '../components';
 import articles from '../constants/articles';
+import Pdf from 'react-native-pdf';
 const { width } = Dimensions.get('screen');
 
 class Dashboard extends React.Component {
   renderArticles = () => {
+    const source = require('../assets/SheetOne.pdf')
     return (
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.articles}>
         <Block flex>
-          <Card item={articles[0]} horizontal  />
+          <Pdf source={source}/>
+          {/* <Card item={articles[0]} horizontal  />
           <Block flex row>
             <Card item={articles[1]} style={{ marginRight: theme.SIZES.BASE }} />
             <Card item={articles[2]} />
           </Block>
           <Card item={articles[3]} horizontal />
-          <Card item={articles[4]} full />
+          <Card item={articles[4]} full /> */}
         </Block>
       </ScrollView>
     )
