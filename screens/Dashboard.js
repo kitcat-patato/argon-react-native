@@ -25,12 +25,14 @@ class Dashboard extends React.Component {
     multipleSelect: false,
   };
 
-  toggleExpandedA = () => {
+  toggleExpandedA = (ea) => {
     this.setState({ collapsed: !this.stateA.collapsed });
+    console.log(ea, "this is error A");
   };
 
-  toggleExpandedB = () => {
+  toggleExpandedB = (eb) => {
     this.setState({ collapsed: !this.stateB.collapsed });
+    console.log(eb, "this is error B");
   };
 
   renderArticles = () => {
@@ -44,11 +46,13 @@ class Dashboard extends React.Component {
             style={styles.productImage}
             source={plant}
           />
+
           <TouchableOpacity onPress={this.toggleExpandedA}>
             <View style={styles.header}>
               <Text style={styles.headerText}>View Details</Text>
             </View>
           </TouchableOpacity>
+
           <Collapsible collapsed={this.stateA.collapsed} align="center">
             <View style={styles.content}>
               <Text>
@@ -58,17 +62,21 @@ class Dashboard extends React.Component {
             </View>
           </Collapsible>
         </Block>
+
+
         <Block center style={styles.productItem}>
           <Image
             resizeMode="cover"
             style={styles.productImage}
             source={fish}
           />
+
           <TouchableOpacity onPress={this.toggleExpandedB}>
             <View style={styles.header}>
               <Text style={styles.headerText}>View Details</Text>
             </View>
           </TouchableOpacity>
+
           <Collapsible collapsed={this.stateB.collapsed} align="center">
             <View style={styles.content}>
               <Text>
