@@ -25,8 +25,12 @@ class Dashboard extends React.Component {
     multipleSelect: false,
   };
 
-  toggleExpanded = () => {
-    this.setState({ collapsed: !this.state.collapsed });
+  toggleExpandedA = () => {
+    this.setState({ collapsed: !this.stateA.collapsed });
+  };
+
+  toggleExpandedB = () => {
+    this.setState({ collapsed: !this.stateB.collapsed });
   };
 
   renderArticles = () => {
@@ -40,7 +44,7 @@ class Dashboard extends React.Component {
             style={styles.productImage}
             source={plant}
           />
-          <TouchableOpacity onPress={this.toggleExpanded}>
+          <TouchableOpacity onPress={this.toggleExpandedA}>
             <View style={styles.header}>
               <Text style={styles.headerText}>View Details</Text>
             </View>
@@ -60,7 +64,7 @@ class Dashboard extends React.Component {
             style={styles.productImage}
             source={fish}
           />
-          <TouchableOpacity onPress={this.toggleExpanded}>
+          <TouchableOpacity onPress={this.toggleExpandedB}>
             <View style={styles.header}>
               <Text style={styles.headerText}>View Details</Text>
             </View>
