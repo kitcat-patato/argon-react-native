@@ -31,6 +31,8 @@ function getJson() {
 getJson().then(data => {
   jsondata = data;
   console.log(jsondata);
+  categories[3].health = jsondata.plant_health;
+  console.log(categories[3].health)
 });
 
 var categories = [
@@ -60,7 +62,7 @@ var categories = [
     description: "Temperature: 24 \n PH Value: 6",
     image: "https://www.gardenzeus.com/wp-content/uploads/shutterstock_83082550-2.jpg",
     section: "Section 4",
-    health: jsondata.plant_health
+    health: ""
   }
 ];
 
@@ -92,7 +94,7 @@ class Crops extends React.Component {
             <Text
               center
               size={16}
-              color={item.health = "GOOD" ? theme.COLORS.MUTED : theme.COLORS.ERROR}
+              color={item.health == "GOOD" ? theme.COLORS.MUTED : theme.COLORS.ERROR}
               style={styles.productDescription}
             >
               {item.description}
