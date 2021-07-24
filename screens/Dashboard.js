@@ -27,12 +27,12 @@ class Dashboard extends React.Component {
   // };
 
   toggleExpandedA = (ea) => {
-    this.setState((e) => {return {collapsedA: !this.state.collapsedA}});
+    this.setState((ez) => {return {collapsedA: !this.state.collapsedA}});
     console.log("ButtonA", this.state.collapsedA);
   };
 
   toggleExpandedB = (eb) => {
-    this.setState({ collapsedB: !this.state.collapsed });
+    this.setState((ex) => {return {collapsedB: !ex.collapsedB}});
     console.log(this.state.collapsedB);
   };
 
@@ -48,7 +48,7 @@ class Dashboard extends React.Component {
             source={plant}
           />
 
-          <TouchableOpacity onPress={this.toggleExpandedA}>
+          <TouchableOpacity onClick={this.toggleExpandedA}>
             <View style={styles.header}>
               <Text style={styles.headerText}>View Details</Text>
             </View>
