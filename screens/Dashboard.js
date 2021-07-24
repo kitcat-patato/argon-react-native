@@ -4,25 +4,58 @@ import { Block, theme } from 'galio-framework';
 
 import { Card } from '../components';
 import articles from '../constants/articles';
-import Pdf from 'react-native-pdf';
+import Collapsible from 'react-native-collapsible';
+
+
 const { width } = Dimensions.get('screen');
+const plant = require("../assets/Plant.png");
+const fish = require("../assets/Fish.png");
 
 class Dashboard extends React.Component {
   renderArticles = () => {
-    const source = require('../assets/SheetOne.pdf')
     return (
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.articles}>
-        <Block flex>
-          <Pdf source={source}/>
-          {/* <Card item={articles[0]} horizontal  />
-          <Block flex row>
-            <Card item={articles[1]} style={{ marginRight: theme.SIZES.BASE }} />
-            <Card item={articles[2]} />
-          </Block>
-          <Card item={articles[3]} horizontal />
-          <Card item={articles[4]} full /> */}
+        <Block center style={styles.productItem}>
+          <Image
+            resizeMode="cover"
+            style={styles.productImage}
+            source={plant}
+          />
+          <TouchableOpacity onPress={this.toggleExpanded}>
+            <View style={styles.header}>
+              <Text style={styles.headerText}>View Details</Text>
+            </View>
+          </TouchableOpacity>
+          <Collapsible collapsed={this.state.collapsed} align="center">
+            <View style={styles.content}>
+              <Text>
+                Average Temperature: 28
+                Average PH Value: 7
+              </Text>
+            </View>
+          </Collapsible>
+        </Block>
+        <Block center style={styles.productItem}>
+          <Image
+            resizeMode="cover"
+            style={styles.productImage}
+            source={fish}
+          />
+          <TouchableOpacity onPress={this.toggleExpanded}>
+            <View style={styles.header}>
+              <Text style={styles.headerText}>View Details</Text>
+            </View>
+          </TouchableOpacity>
+          <Collapsible collapsed={this.state.collapsed} align="center">
+            <View style={styles.content}>
+              <Text>
+                Average Temperature: 28
+                Average PH Value: 7
+              </Text>
+            </View>
+          </Collapsible>
         </Block>
       </ScrollView>
     )
@@ -39,11 +72,37 @@ class Dashboard extends React.Component {
 
 const styles = StyleSheet.create({
   home: {
-    width: width,    
+    width: width,
   },
   articles: {
     width: width - theme.SIZES.BASE * 2,
     paddingVertical: theme.SIZES.BASE,
+  },
+  header: {
+    backgroundColor: '#F5FCFF',
+    padding: 10,
+  },
+  headerText: {
+    textAlign: 'center',
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  content: {
+    padding: 20,
+    backgroundColor: '#fff',
+  },
+  productItem: {
+    width: cardWidth - theme.SIZES.BASE * 2,
+    marginHorizontal: theme.SIZES.BASE,
+    shadowColor: "black",
+    shadowOffset: { width: 0, height: 7 },
+    shadowRadius: 10,
+    shadowOpacity: 0.2
+  },
+  productImage: {
+    width: cardWidth - theme.SIZES.BASE,
+    height: cardWidth - theme.SIZES.BASE,
+    borderRadius: 3
   },
 });
 
