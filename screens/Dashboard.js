@@ -26,11 +26,13 @@ class Dashboard extends React.Component {
   };
 
   toggleExpandedA = (ea) => {
-    this.setStateA({ collapsed: !this.stateA.collapsed });
+    this.setState({ collapsed: !this.stateA.collapsed });
+    console.log("stateA", this.stateA);
   };
 
   toggleExpandedB = (eb) => {
-    this.setStateB({ collapsed: !this.stateB.collapsed });
+    this.setState({ collapsed: !this.stateB.collapsed });
+    console.log("stateB", this.stateB);
   };
 
   renderArticles = () => {
