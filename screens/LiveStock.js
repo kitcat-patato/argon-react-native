@@ -17,36 +17,36 @@ const thumbMeasure = (width - 48 - 32) / 3;
 const cardWidth = width - theme.SIZES.BASE * 2;
 const categories = [
   {
-    title: "Statistics S1",
+    title: "Blue Fish",
     description:
-      "Temperature: 24 \n PH Value: 6",
+      "Temperature: 24°C \n PH Value: 6",
     image:
-      "https://media.giphy.com/media/puKGe5eOALSh42ip0w/giphy.gif",
-    section: "Section 1"
+      "https://media.giphy.com/media/v2qGDmiR7G8OyAh3em/giphy.gif",
+    section: "Livestock 1"
   },
   {
-    title: "Statistics S2",
+    title: "Koi Fish",
     description:
-      "Temperature: 24 \n PH Value: 6",
+      "Temperature: 30°C \n PH Value: 7.6",
     image:
       "https://i.gifer.com/g2v9.gif",
-    section: "Section 2"
+    section: "Livestock 2"
   },
   {
-    title: "Statistics S3",
+    title: "Red Fish",
     description:
-      "Temperature: 24 \n PH Value: 6",
+      "Temperature: 28°C \n PH Value: 6.6",
     image:
       "https://media2.giphy.com/media/AwCdK6OS6J1OE/giphy.gif?cid=ecf05e47ercngo788ay5b9dybrjv2v8fqkil2mldx1mbegme&rid=giphy.gif&ct=g",
-    section: "Section 3"
+    section: "Livestock 3"
   },
   {
-    title: "Statistics S4",
+    title: "Grey Fish",
     description:
-      "Temperature: 24 \n PH Value: 6",
+      "Temperature: 26°C \n PH Value: 5",
     image:
       "https://i.gifer.com/WW8.gif",
-    section: "Section 4"
+    section: "Livestock 4"
   }
 ];
 
@@ -79,7 +79,7 @@ class LiveStock extends React.Component {
             <Text
               center
               size={16}
-              color={theme.COLORS.MUTED}
+              color = {`#228b22`}
               style={styles.productDescription}
             >
               {item.description}

@@ -57,8 +57,9 @@ class Dashboard extends React.Component {
           <Collapsible collapsed={this.state.collapsedA} align="center">
             <View style={styles.content}>
               <Text>
-                Average Temperature: 28
-                Average PH Value: 7
+              Average pH (Surface) = 6.9087 
+              {'\n'}Average Temperature = 19.0923°C
+              {'\n'}Total Crop Yield = 17,098,202
               </Text>
             </View>
           </Collapsible>
@@ -81,8 +82,9 @@ class Dashboard extends React.Component {
           <Collapsible collapsed={this.state.collapsedB} align="center">
             <View style={styles.content}>
               <Text>
-                Average Temperature: 28
-                Average PH Value: 7
+              Average pH = 7.7578
+              {'\n'}Average Temperature = 20.1234°C
+              {'\n'}Average Turbidity = 215.4851
               </Text>
             </View>
           </Collapsible>
@@ -109,7 +111,7 @@ const styles = StyleSheet.create({
     paddingVertical: theme.SIZES.BASE,
   },
   header: {
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#f5fffa',
     padding: 10,
   },
   headerText: {
@@ -119,7 +121,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#e0ffff',
   },
   productItem: {
     width: cardWidth - theme.SIZES.BASE * 2,

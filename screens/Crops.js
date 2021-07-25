@@ -37,31 +37,31 @@ getJson().then(data => {
 
 var categories = [
   {
-    title: "Statistics S1",
-    description: "Temperature: 24 \n PH Value: 6",
+    title: "Spinach",
+    description: "Temperature: 24°C \n PH Value of Soil: 9",
     image: "https://i.gifer.com/HAhw.gif",
-    section: "Section 1",
+    section: "Crop 1",
     health: "GOOD"
   },
   {
-    title: "Statistics S2",
-    description: "Temperature: 24 \n PH Value: 6",
+    title: "Tomato Plot 1",
+    description: "Temperature: 28°C \n PH Value of Soil: 9.5",
     image: "https://i.gifer.com/MJQC.gif",
-    section: "Section 2",
+    section: "Crop 2",
     health: "GOOD"
   },
   {
-    title: "Statistics S3",
-    description: "Temperature: 24 \n PH Value: 6",
+    title: "Mint",
+    description: "Temperature: 30°C \n PH Value of Soil: 8.9",
     image: "https://media1.giphy.com/media/WM5rquwnPzBtK/giphy.gif?cid=ecf05e47mzjbb2wbgxjxdygm2y3mcqft1jhq8ffy9fr6k5ki&rid=giphy.gif&ct=g",
-    section: "Section 3",
+    section: "Crop 3",
     health: "GOOD"
   },
   {
-    title: "Statistics S4",
-    description: "Temperature: 24 \n PH Value: 6",
+    title: "Tomato Plot 2",
+    description: "Temperature: 24°C \n PH Value of Soil: 8.8",
     image: "https://www.gardenzeus.com/wp-content/uploads/shutterstock_83082550-2.jpg",
-    section: "Section 4",
+    section: "Crop 4",
     health: ""
   }
 ];
@@ -94,7 +94,7 @@ class Crops extends React.Component {
             <Text
               center
               size={16}
-              color={item.health == "GOOD" ? "black" : "red"}
+              color={item.health == "GOOD" ? "green" : "red"}
               style={styles.productDescription}
             >
               {item.description}
