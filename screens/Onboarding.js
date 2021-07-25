@@ -44,14 +44,14 @@ class Onboarding extends React.Component {
         dotColor="#998FA2"
       >
         <View style={styles.slide}>
-          <Image source={require("../assets/imgs/leaf.gif")} style={styles.img} />
+          <Image source={require("../assets/imgs/analysis.gif")} style={styles.img} />
           <Text style={styles.title}>STATISTICS</Text>
           <Text style={styles.text}>
-            Getting summarise environment statistics on hand 
+            Getting your farm statistics on hand 
           </Text>
         </View>
         <View style={styles.slide}>
-          <Image source={require("../assets/imgs/clock.gif")} style={styles.img} />
+          <Image source={require("../assets/imgs/plant.gif")} style={styles.img} />
           <Text style={styles.title}>LIVE</Text>
           <Text style={styles.text}>
             Live update of crops and livestock conditions
@@ -59,7 +59,7 @@ class Onboarding extends React.Component {
         </View>
 
         <View style={styles.slide}>
-          <Image source={require("../assets/imgs/magnifier.gif")} style={styles.img} />
+          <Image source={require("../assets/imgs/statistics.gif")} style={styles.img} />
           <Text style={styles.title}>ONE STOP</Text>
           <Text style={styles.text}>
             One stop overview and management of farms

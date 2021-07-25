@@ -42,7 +42,7 @@ class Profile extends React.Component {
               <Block flex style={styles.profileCard}>
                 <Block middle style={styles.avatarContainer}>
                   <Image
-                    source={{ uri: Images.ProfilePicture }}
+                    source={require("../assets/imgs/farmer.gif")}
                     style={styles.avatar}
                   />
                 </Block>
@@ -85,10 +85,10 @@ class Profile extends React.Component {
                 <Block flex>
                   <Block middle style={styles.nameInfo}>
                     <Text bold size={28} color="#32325D">
-                      Uncle Joe
+                      Auntie Karen
                     </Text>
                     <Text size={16} color="#32325D" style={{ marginTop: 10 }}>
-                      Company A, Singapore
+                      Company Farmz Tech, Singapore
                     </Text>
                   </Block>
                   <Block middle style={{ marginTop: 30, marginBottom: 16 }}>
