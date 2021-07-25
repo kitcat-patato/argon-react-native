@@ -48,9 +48,9 @@ class Dashboard extends React.Component {
             source={plant}
           />
 
-          <TouchableOpacity onClick={this.toggleExpandedA}>
+          <TouchableOpacity onPress={this.toggleExpandedA}>
             <View style={styles.header}>
-              <Text style={styles.headerText}>View Details</Text>
+              <Text style={styles.headerText}>View Plant Status Details</Text>
             </View>
           </TouchableOpacity>
 
@@ -74,7 +74,7 @@ class Dashboard extends React.Component {
 
           <TouchableOpacity onPress={this.toggleExpandedB}>
             <View style={styles.header}>
-              <Text style={styles.headerText}>View Details</Text>
+              <Text style={styles.headerText}>View Livestock Status Details</Text>
             </View>
           </TouchableOpacity>
 
