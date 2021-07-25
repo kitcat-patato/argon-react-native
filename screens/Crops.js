@@ -30,9 +30,7 @@ function getJson() {
 
 getJson().then(data => {
   jsondata = data;
-  console.log(jsondata);
   categories[3].health = jsondata.plant_health;
-  console.log(categories[3].health)
 });
 
 var categories = [
